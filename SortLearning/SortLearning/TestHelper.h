@@ -105,6 +105,14 @@ namespace SortTestHelper
 		}
 		return true;
 	}
+
+	template <typename T>
+	T*  NewCopyArray( T*arrSrc, int nLen)
+	{
+		T *pNewCopyArr = new T[nLen];
+		memcpy_s(pNewCopyArr, nLen*sizeof(T),arrSrc, nLen*sizeof(T));
+		return pNewCopyArr;
+	}
 	
 };
 #endif

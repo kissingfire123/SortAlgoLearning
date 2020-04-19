@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <ctime>
 #include <iomanip>//for setw()
+#include <string.h>
 using namespace std;
 
 
