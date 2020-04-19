@@ -3,3 +3,5 @@ SortLearning/SortLearning/Debug/
 
 *.pdb
 *.obj
+*.sdf
+*.suo

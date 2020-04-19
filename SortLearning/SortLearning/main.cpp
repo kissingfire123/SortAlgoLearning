@@ -54,7 +54,7 @@ int main()
 	return 0;
 }
 
-//运行结果如下：
+//运行结果如下： V1.0.1
 /*
 Sort a array which is complete random : DataLen = 1000
 Bubble Sort : 0.052s
@@ -70,4 +70,25 @@ Sort a array which contains many same element : DataLen = 1000
 Bubble Sort : 0.046s
 Select Sort : 0.002s
 Insert Sort : 0.04s
+*/
+
+
+
+//运行结果如下： V1.0.2
+//优化了选择排序
+/*
+Sort a array which is complete random : DataLen = 1000
+Bubble Sort : 0.056s
+Select Sort : 0.002s
+Insert Sort : 0.001s
+
+Sort a array which is nearly sorted : DataLen = 1000
+Bubble Sort : 0.003s
+Select Sort : 0.002s
+Insert Sort : 0.001s
+
+Sort a array which contains many same element : DataLen = 1000
+Bubble Sort : 0.033s
+Select Sort : 0.002s
+Insert Sort : 0.001s
 */
