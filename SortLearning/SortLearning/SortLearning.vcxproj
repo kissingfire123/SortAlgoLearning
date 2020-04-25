@@ -82,6 +82,7 @@
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="InsertionSort.h" />
+    <ClInclude Include="MergeSort.h" />
     <ClInclude Include="SelectionSort.h" />
     <ClInclude Include="TestHelper.h" />
   </ItemGroup>

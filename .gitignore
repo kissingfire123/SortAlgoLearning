@@ -1,5 +1,7 @@
 SortLearning/Debug/
+SortLearning/Release/
 SortLearning/SortLearning/Debug/
+SortLearning/SortLearning/Release/
 
 *.pdb
 *.obj
