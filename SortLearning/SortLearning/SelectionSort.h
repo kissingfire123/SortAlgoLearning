@@ -2,7 +2,7 @@
 #define __SELECTION_SORT_H__
 
 //选择排序
-//升序排列，从小到大
+//升序排列，从小到大  ,区间 [0,nLen )
 template <typename T>
 void SelectionSort(T arr[], int nLen)
 {

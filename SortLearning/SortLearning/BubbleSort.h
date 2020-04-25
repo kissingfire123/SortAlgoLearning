@@ -3,7 +3,7 @@
 #include "Common.h"
 
 
-//升序排列，从小到大
+//升序排列，从小到大  ,区间 [0,nLen )
 template <typename T>
 void BubbleSort(T arr[], int nLen)
 {

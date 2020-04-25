@@ -22,7 +22,7 @@ int main()
 		ppTestArray[ii] = SortTestHelper::NewCopyArray<int>(ppTestArray[0], nArrayLen);
 	}
 	cout << endl << "Sort a array which is complete random :" <<"  DataLen="<<nArrayLen<<endl;
-	SortTestHelper::TestSortPerform("Bubble Sort", BubbleSort,    ppTestArray[0], nArrayLen);
+	//SortTestHelper::TestSortPerform("Bubble Sort", BubbleSort,    ppTestArray[0], nArrayLen);
 	SortTestHelper::TestSortPerform("Select Sort", SelectionSort, ppTestArray[1], nArrayLen);
 	SortTestHelper::TestSortPerform("Insert Sort", InsertionSort, ppTestArray[2], nArrayLen);
 	SortTestHelper::TestSortPerform("Merge  Sort", MergeSort,     ppTestArray[3], nArrayLen);
@@ -34,7 +34,7 @@ int main()
 	{
 		ppTestArray[ii] = SortTestHelper::NewCopyArray<int>(ppTestArray[SORT_KINDS_NUM], nArrayLen);
 	}
-	SortTestHelper::TestSortPerform("Bubble Sort", BubbleSort,    ppTestArray[SORT_KINDS_NUM],     nArrayLen);
+	//SortTestHelper::TestSortPerform("Bubble Sort", BubbleSort,    ppTestArray[SORT_KINDS_NUM],     nArrayLen);
 	SortTestHelper::TestSortPerform("Select Sort", SelectionSort, ppTestArray[SORT_KINDS_NUM + 1], nArrayLen);
 	SortTestHelper::TestSortPerform("Insert Sort", InsertionSort, ppTestArray[SORT_KINDS_NUM + 2], nArrayLen);
 	SortTestHelper::TestSortPerform("Merge  Sort", MergeSort,     ppTestArray[SORT_KINDS_NUM + 3], nArrayLen);
@@ -47,7 +47,7 @@ int main()
 		ppTestArray[ii] = SortTestHelper::NewCopyArray<int>(ppTestArray[2 * SORT_KINDS_NUM], nArrayLen);
 	}
 
-	SortTestHelper::TestSortPerform("Bubble Sort", BubbleSort,    ppTestArray[2 * SORT_KINDS_NUM],     nArrayLen);
+	//SortTestHelper::TestSortPerform("Bubble Sort", BubbleSort,    ppTestArray[2 * SORT_KINDS_NUM],     nArrayLen);
 	SortTestHelper::TestSortPerform("Select Sort", SelectionSort, ppTestArray[2 * SORT_KINDS_NUM + 1], nArrayLen);
 	SortTestHelper::TestSortPerform("Insert Sort", InsertionSort, ppTestArray[2 * SORT_KINDS_NUM + 2], nArrayLen);
 	SortTestHelper::TestSortPerform("Merge  Sort", MergeSort,     ppTestArray[2 * SORT_KINDS_NUM + 3], nArrayLen);
@@ -134,7 +134,7 @@ Merge  Sort:0.02s
 Sort a array which is nearly sorted :  DataLen=10000
 Bubble Sort:0.183s
 Select Sort:0.197s
-Insert Sort:0s
+Insert Sort:0.000s
 Merge  Sort:0.019s
 
 Sort a array which contains many same element :  DataLen=10000
@@ -143,3 +143,24 @@ Select Sort:0.195s
 Insert Sort:0.099s
 Merge  Sort:0.02s
 */  
+
+//运行结果如下： V1.0.4
+//加入了归并排序(优化后的归并)
+/* 数据长度10000
+Sort a array which is complete random : DataLen = 10000
+Select Sort : 0.194s
+Insert Sort : 0.105s
+Merge  Sort : 0.006s
+
+Sort a array which is nearly sorted : DataLen = 10000
+Select Sort : 0.191s
+Insert Sort : 0.001s
+Merge  Sort : 0.002s
+
+Sort a array which contains many same element : DataLen = 10000
+Select Sort : 0.195s
+Insert Sort : 0.078s
+Merge  Sort : 0.004s
+
+There are all results above ...
+*/

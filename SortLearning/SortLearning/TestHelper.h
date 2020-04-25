@@ -3,6 +3,10 @@
 
 #include "Common.h"
 
+
+//运行时间(单位：秒)保留到小数点后的几位
+#define DECIMAL_PRECISION   3    
+
 namespace SortTestHelper
 {
 	//生成一个长度nLen的随机数组，范围为[minVal,maxVal],初始逆序次数为nSwapTimes
@@ -89,7 +93,9 @@ namespace SortTestHelper
 			cout << "Array haven't been sorted!" << endl;
 			return;
 		}
-		cout << strSortName.c_str() << ":" << double(tStopTIme - tStartTime) / CLOCKS_PER_SEC << "s" << endl;
+		///设置一定的浮点精度
+		cout << setiosflags(ios::fixed);//保证setprecision()是设置小数点后的位数,而不是整数和小数总位数
+		cout << strSortName.c_str() << ":" << setprecision(DECIMAL_PRECISION) << double(tStopTIme - tStartTime) / CLOCKS_PER_SEC << "s" << endl;
 	}
 
 	//判断一个数组是否是从小到大排序成功的
