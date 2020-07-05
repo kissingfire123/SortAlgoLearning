@@ -1,11 +1,14 @@
 #include "Common.h"
 #include "TestHelper.h"
+
 #include "BubbleSort.h"
 #include "SelectionSort.h"
 #include "InsertionSort.h"
 #include "MergeSort.h"
+#include "QuickSort.h"
 
-#define SORT_KINDS_NUM 4 
+//排序方法的种类数
+#define SORT_KINDS_NUM 5 
 
 int main()
 {
@@ -26,6 +29,7 @@ int main()
 	SortTestHelper::TestSortPerform("Select Sort", SelectionSort, ppTestArray[1], nArrayLen);
 	SortTestHelper::TestSortPerform("Insert Sort", InsertionSort, ppTestArray[2], nArrayLen);
 	SortTestHelper::TestSortPerform("Merge  Sort", MergeSort,     ppTestArray[3], nArrayLen);
+	SortTestHelper::TestSortPerform("Quick  Sort", QuickSort,     ppTestArray[4], nArrayLen);
 
 	//排序一个近乎有序的序列
 	cout << endl << "Sort a array which is nearly sorted :" << "  DataLen=" << nArrayLen << endl;
@@ -38,7 +42,7 @@ int main()
 	SortTestHelper::TestSortPerform("Select Sort", SelectionSort, ppTestArray[SORT_KINDS_NUM + 1], nArrayLen);
 	SortTestHelper::TestSortPerform("Insert Sort", InsertionSort, ppTestArray[SORT_KINDS_NUM + 2], nArrayLen);
 	SortTestHelper::TestSortPerform("Merge  Sort", MergeSort,     ppTestArray[SORT_KINDS_NUM + 3], nArrayLen);
-
+	SortTestHelper::TestSortPerform("Quick  Sort", QuickSort,     ppTestArray[SORT_KINDS_NUM + 4], nArrayLen);
 	//排序一个有大量重复元素的序列
 	cout << endl << "Sort a array which contains many same element :" << "  DataLen=" << nArrayLen << endl;
 	ppTestArray[2 * SORT_KINDS_NUM] = SortTestHelper::NewRandArr<int>(nArrayLen, 0, 5);
@@ -51,6 +55,7 @@ int main()
 	SortTestHelper::TestSortPerform("Select Sort", SelectionSort, ppTestArray[2 * SORT_KINDS_NUM + 1], nArrayLen);
 	SortTestHelper::TestSortPerform("Insert Sort", InsertionSort, ppTestArray[2 * SORT_KINDS_NUM + 2], nArrayLen);
 	SortTestHelper::TestSortPerform("Merge  Sort", MergeSort,     ppTestArray[2 * SORT_KINDS_NUM + 3], nArrayLen);
+	SortTestHelper::TestSortPerform("Quick  Sort", QuickSort,     ppTestArray[2 * SORT_KINDS_NUM + 4], nArrayLen);
 
 	for (int ii = 0; ii < 3 * SORT_KINDS_NUM; ii++)
 	{
