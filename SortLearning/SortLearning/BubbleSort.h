@@ -11,10 +11,10 @@ void BubbleSort(T arr[], int nLen)
 	{
 		return;
 	}
-	//优化1：如果上一轮没有发生交换，则表排序提前完成
+	//优化1：如果上一轮没有发生交换，则表示排序提前完成
 	bool nSwappedFlag = false;
 	//优化2：对于第ii轮，记录最后那个发生交换的位置idx，下一轮ii轮直接从idx开始，避免局部有序列的重复操作. eg:原始6,4,7,5,1,3,2
-	int  nLastLoopSwapIdx = 0;
+	int  nLastLoopSwapIdx = 0;//nSwapTimes记录每一轮交换的最右侧，值最大的索引，表示右边已经局部有序
 	int  nSwapTimes = nLen - 1;
 	for (int ii =nLen - 1; ii > 0; ii--)
 	{
