@@ -169,3 +169,38 @@ Merge  Sort : 0.004s
 
 There are all results above ...
 */
+
+//运行结果如下： V1.0.5
+//加入了快速排序(优化后的快排)
+/* 数据长度10000
+
+Sort a array which is complete random :  DataLen=10000
+Select Sort:0.196s
+Insert Sort:0.104s
+Merge  Sort:0.006s
+Quick  Sort:0.005s
+
+Sort a array which is nearly sorted :  DataLen=10000
+Select Sort:0.190s
+Insert Sort:0.001s
+Merge  Sort:0.001s
+Quick  Sort:0.001s
+
+Sort a array which contains many same element :  DataLen=10000
+Select Sort:0.190s
+Insert Sort:0.077s
+Merge  Sort:0.006s
+Quick  Sort:0.008s
+
+
+
+
+
+
+
+
+
+
+
+
+*/

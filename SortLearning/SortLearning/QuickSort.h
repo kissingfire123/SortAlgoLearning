@@ -15,7 +15,7 @@ void QuickSort(T arr[], int nLen)
 template <typename T>
 void __qucikSort(T arr[], int idxL, int idxR)
 {
-	//优化操作1：当快速排序的排序片段短到一定长度时，转而用插入排序方法加速
+	//优化操作2：当快速排序的排序片段短到一定长度时，转而用插入排序方法加速
 	if (idxR - idxL < 16)
 	{
 		InsertionSort_Part(arr, idxL, idxR);
@@ -30,7 +30,7 @@ void __qucikSort(T arr[], int idxL, int idxR)
 template <typename T>
 int __partition(T arr[], int idxL, int idxR)
 {
-	//优化操作2：为避免极端数据提升复杂度，先随机一个锚定值放到第一个元素
+	//优化操作1：为避免极端数据提升复杂度，先随机一个锚定值放到第一个元素的位置
 	int nRandIdx = (int)(idxL +  (rand() % (idxR - idxL + 1 )));
 	swap(arr[idxL], arr[nRandIdx]);
 
